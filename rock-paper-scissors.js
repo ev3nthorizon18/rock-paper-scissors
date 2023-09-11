@@ -7,21 +7,24 @@
 
  //The game will require a user input of the three choices (rock, paper, scissors).
 playerSelection = prompt("Choose either Rock, Paper, or Scissors.");
-
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === 'Rock') {
-        return ('Rock');
-    }else if(playerSelection === 'Paper'){
-        return ('Paper');
+    if (playerSelection.toLowerCase() === 'rock') {
+        console.log('Rock');
+    }else if(playerSelection.toLowerCase() === 'paper'){
+        console.log ('Paper');
+    }else if(playerSelection.toLowerCase() === 'scissors'){
+        console.log ('Scissors');
     }else{
-        return('Scissors');
+        console.log('Not an Option');
     }
+
+computerSelection = ["Rock", "Paper", "Scissors"];
+
+function getComputerChoice () {
+    console.log(computerSelection[(Math.floor(Math.random()*computerSelection.length))]);
 }
 
-
- function getComputerChoice (Rock, Paper, Scissors) {}
-
-   
+function playRound(playerSelection, computerSelection) {
+}
   
   const computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
