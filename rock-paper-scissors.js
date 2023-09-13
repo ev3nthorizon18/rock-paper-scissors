@@ -50,11 +50,11 @@ function game () {
 
     console.log("Player Tally: " + playerTally, "Computer Tally: " +computerTally);
 if (playerTally>computerTally){
-        console.log("You win the best of five match!");
+        console.log("You win the best of five match! "+ playerTally + " to "+computerTally);
 }else if (computerTally>playerTally){
-        console.log("You lose the best of five match!");
+        console.log("You lose the best of five match! "+ playerTally + " to "+computerTally);
 }else {
-            console.log("Best of five match is a tie!");
+            console.log("Best of five match is a tie!"+ playerTally + " to "+computerTally);
      }     
     }
     
