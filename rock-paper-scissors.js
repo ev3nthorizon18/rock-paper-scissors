@@ -39,14 +39,15 @@ function game () {
         let result=playRound.call(this, playerSelection, computerSelection);
 
         console.log("Player Selection" + ": " + playerSelection + ", ", "Computer Selection" + ": " +computerSelection+ ", ", result);
+        
 // The if else statement tallies the wins of the user and the wins of the computer for the five game match. 
         if (result==="You win! Scissors beats Paper" || result==="You win! Paper beats Rock" || result==="You win! Rock beats Scissors"){
             playerTally +=1; 
         }else if (result==="You lose! Scissors beats Paper" || result==="You lose! Paper beats Rock" || result==="You lose! Rock beats Scissors"){
             computerTally+=1;
         }
-    }
-          
+    }   
+
 // The if else statement compares the playerTally to the computerTally to determine the winner of the five game match. 
     console.log("Player Tally: " + playerTally, "Computer Tally: " +computerTally);
 if (playerTally>computerTally){
@@ -57,8 +58,6 @@ if (playerTally>computerTally){
             console.log("Best of five match is a tie!"+ playerTally + " to "+computerTally);
      }     
     }
-    
-    
 game()
 
 
