@@ -76,6 +76,9 @@ function reset(){
     computerScore.innerText = "Computer Score is: 0";
     playerScore.innerText = "Player Score is: 0";
     tieScore.innerText = "Tied Score is: 0";
+    playerWinsNumber = 0;
+    computerWinsNumber = 0;
+    tieNumber = 0;
 }
 
 
