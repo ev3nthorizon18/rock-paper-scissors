@@ -10,6 +10,14 @@ const rockButton = document.getElementById("ROCK");
 const paperButton = document.getElementById("PAPER");
 const scissorsButton = document.getElementById("SCISSORS");
 
+const playerScore = document.getElementById("player-score");
+const computerScore = document.getElementById("computer-score");
+const tieScore = document.getElementById("tied-score");
+
+let playerWinsNumber = 0;
+let computerWinsNumber = 0;
+let tieNumber = 0;
+
 function click(e){
     const playerSelection = e.target.id;
     const computerSelection = getComputerChoice();
@@ -24,30 +32,51 @@ scissorsButton.addEventListener("click", click);
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection ==="ROCK" && computerSelection ==="SCISSORS"){
-        console.log("You win! Rock beats Scissors");
+        playerWins();
     }else if(playerSelection  ==="PAPER"&& computerSelection ==="SCISSORS"){
-        console.log("You lose! Scissors beats Paper");
+        computerWins();
     }else if(playerSelection  ==="SCISSORS" && computerSelection ==="ROCK"){
-        console.log("You lose! Rock beats Scissors");
+        computerWins();
     }else if(playerSelection   ==="ROCK" && computerSelection ==="PAPER"){
-        console.log("You lose! Paper beats Rock");
+        computerWins();
     }else if(playerSelection  ==="PAPER" && computerSelection ==="ROCK"){
-        console.log("You win! Paper beats Rock");
+        playerWins();
     }else if(playerSelection  ==="SCISSORS" && computerSelection ==="PAPER"){
-        console.log("You win! Scissors beats Paper");
+        playerWins();
     }else {
-       console.log("Game is a tie");
+        tieWins();
+    }
+    if (playerWinsNumber === 5){
+        alert("You won! Congratulations!");
+        reset();
+    }else if(computerWinsNumber === 5){
+        alert("You lost! Better luck next time.")
+        reset();
     }
 }
 
 
 function playerWins (){
     ++playerWinsNumber;
-    
+    playerScore.innerText = "Player Score is: " + playerWinsNumber;
+    }
+
+function computerWins (){
+    ++computerWinsNumber;
+    computerScore.innerText = "Computer Score is: " + computerWinsNumber;
+    }
+
+function tieWins (){
+    ++tieNumber;
+    tieScore.innerText = "Tied Score is: " + tieNumber;
+    }
+
+
+function reset(){
+    computerScore.innerText = "Computer Score is: 0";
+    playerScore.innerText = "Player Score is: 0";
+    tieScore.innerText = "Tied Score is: 0";
 }
-
-
-
 
 
 
