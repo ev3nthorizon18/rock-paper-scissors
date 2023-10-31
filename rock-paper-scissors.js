@@ -82,7 +82,9 @@ function reset(){
 
 
 
-// This component will store the randomly selected string from rockPaperScissorsArray allowing the use of it for the future.
+// THIS IS OLD CODE THAT I FIRST USED IN THE ROCK PAPER SCISSORS PROJECT THAT I HAVE HERE FOR REFERENCE ONLY
+
+//This component will store the randomly selected string from rockPaperScissorsArray allowing the use of it for the future.
 
 
 //The game() function includes a for loop that will run the playRound 5 different times. Each run will determine a winner of the round. The winner is then tallied to determine who has the most wins in a best of five match.. 
