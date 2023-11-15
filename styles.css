@@ -1,0 +1,55 @@
+#container-title {
+display:flex;
+text-align: center;
+font-size: 100px;
+justify-content: center;
+background-color: black;
+color: orange;
+margin: 15px;
+border-radius: 4px;
+}
+
+
+#button-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+#btn {
+    border-radius: 8px;
+
+}
+
+#ROCK, #PAPER, #SCISSORS {
+
+width: 250px ; 
+height: 250px ;
+border-radius: 8px;
+cursor: pointer;
+}
+
+body {
+   background-color: rgb(70, 66, 66); 
+}
+
+#results{
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+    color: rgb(255, 0, 106);
+}
+
+#resultBtn{
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+#resultBtnContainer{
+    display: flex;
+    justify-content: center;
+}
